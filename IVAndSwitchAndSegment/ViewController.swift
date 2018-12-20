@@ -11,9 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var imageOne: UIImageView!
-    
     @IBOutlet weak var imageTwo: UIImageView!
-    
     @IBOutlet weak var label: UILabel!
     
     
