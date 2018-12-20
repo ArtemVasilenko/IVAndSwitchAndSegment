@@ -48,10 +48,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WfB-gg-5jg">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WfB-gg-5jg">
                                 <rect key="frame" x="16" y="520" width="288" height="28"/>
                                 <segments>
-                                    <segment title="First"/>
+                                    <segment title="White"/>
                                     <segment title="Second"/>
                                     <segment title=""/>
                                     <segment title=""/>
