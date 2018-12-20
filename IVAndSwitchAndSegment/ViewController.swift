@@ -9,12 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBOutlet weak var imageOne: UIImageView!
+    
+    @IBOutlet weak var imageTwo: UIImageView!
+    
+    @IBOutlet weak var label: UILabel!
+    
+    
+    @IBAction func segment(_ sender: UISegmentedControl) {
     }
-
-
+    
+    @IBAction func mySwitch(_ sender: UISwitch) {
+    }
+    
+    override func viewDidLoad() {
+        
+    }
+    
 }
 

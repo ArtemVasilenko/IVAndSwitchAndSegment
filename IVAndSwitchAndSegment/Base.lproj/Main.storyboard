@@ -18,14 +18,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bvz-5k-R12">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bvz-5k-R12">
                                 <rect key="frame" x="16" y="20" width="288" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="mbM-Jx-BAL"/>
+                                </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jBR-3J-GZh">
+                                <rect key="frame" x="16" y="144" width="288" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="HYy-7y-R6o"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jzL-Iw-BOI">
+                                <rect key="frame" x="16" y="268" width="288" height="116"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Xm-8n-E8n">
+                                <rect key="frame" x="16" y="392" width="51" height="31"/>
+                                <connections>
+                                    <action selector="mySwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="f1n-Qh-3k6"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orc-DQ-thP">
+                                <rect key="frame" x="197" y="392" width="107" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="JHi-ff-Xb0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WfB-gg-5jg">
+                                <rect key="frame" x="16" y="520" width="288" height="28"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                </segments>
+                                <connections>
+                                    <action selector="segment:" destination="BYZ-38-t0r" eventType="valueChanged" id="bII-NW-GhB"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jBR-3J-GZh" firstAttribute="trailing" secondItem="bvz-5k-R12" secondAttribute="trailing" id="0kW-UC-VCw"/>
+                            <constraint firstItem="8Xm-8n-E8n" firstAttribute="leading" secondItem="jzL-Iw-BOI" secondAttribute="leading" id="1kN-fw-gH5"/>
+                            <constraint firstItem="WfB-gg-5jg" firstAttribute="trailing" secondItem="orc-DQ-thP" secondAttribute="trailing" id="3aW-KX-7bW"/>
+                            <constraint firstItem="orc-DQ-thP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Xm-8n-E8n" secondAttribute="trailing" constant="8" symbolic="YES" id="6SV-z5-Vlj"/>
+                            <constraint firstItem="orc-DQ-thP" firstAttribute="trailing" secondItem="jzL-Iw-BOI" secondAttribute="trailing" id="7vO-Rg-OyA"/>
+                            <constraint firstItem="jBR-3J-GZh" firstAttribute="leading" secondItem="bvz-5k-R12" secondAttribute="leading" id="KpU-ha-B0l"/>
+                            <constraint firstItem="jzL-Iw-BOI" firstAttribute="trailing" secondItem="jBR-3J-GZh" secondAttribute="trailing" id="Lzy-GA-i6S"/>
+                            <constraint firstItem="WfB-gg-5jg" firstAttribute="top" secondItem="orc-DQ-thP" secondAttribute="bottom" constant="91" id="M1w-Ib-JOY"/>
+                            <constraint firstItem="bvz-5k-R12" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="MRE-Yo-68e"/>
+                            <constraint firstItem="bvz-5k-R12" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WxW-db-NHn"/>
+                            <constraint firstItem="jzL-Iw-BOI" firstAttribute="top" secondItem="jBR-3J-GZh" secondAttribute="bottom" constant="8" symbolic="YES" id="aUc-Gr-2ih"/>
+                            <constraint firstItem="2t4-Va-Gg3" firstAttribute="bottom" secondItem="orc-DQ-thP" secondAttribute="bottom" constant="139" id="dSt-7V-y2o"/>
+                            <constraint firstItem="bvz-5k-R12" firstAttribute="top" secondItem="2t4-Va-Gg3" secondAttribute="top" id="eYr-sE-k3w"/>
+                            <constraint firstItem="2t4-Va-Gg3" firstAttribute="bottom" secondItem="jzL-Iw-BOI" secondAttribute="bottom" constant="184" id="iRl-Pe-lB2"/>
+                            <constraint firstItem="8Xm-8n-E8n" firstAttribute="top" secondItem="jzL-Iw-BOI" secondAttribute="bottom" constant="8" symbolic="YES" id="jcW-cX-xTM"/>
+                            <constraint firstItem="orc-DQ-thP" firstAttribute="top" secondItem="8Xm-8n-E8n" secondAttribute="top" id="qRJ-N5-ojV"/>
+                            <constraint firstItem="jBR-3J-GZh" firstAttribute="top" secondItem="bvz-5k-R12" secondAttribute="bottom" constant="8" symbolic="YES" id="rDQ-7k-ibv"/>
+                            <constraint firstItem="WfB-gg-5jg" firstAttribute="leading" secondItem="8Xm-8n-E8n" secondAttribute="leading" id="t0O-8E-wKK"/>
+                            <constraint firstItem="2t4-Va-Gg3" firstAttribute="bottom" secondItem="WfB-gg-5jg" secondAttribute="bottom" constant="21" id="tcw-gI-opk"/>
+                            <constraint firstItem="jzL-Iw-BOI" firstAttribute="leading" secondItem="jBR-3J-GZh" secondAttribute="leading" id="xSt-wA-ceT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2t4-Va-Gg3"/>
                     </view>
+                    <connections>
+                        <outlet property="imageOne" destination="bvz-5k-R12" id="bjJ-9b-qPm"/>
+                        <outlet property="imageTwo" destination="jBR-3J-GZh" id="4cs-Wt-Lgc"/>
+                        <outlet property="label" destination="orc-DQ-thP" id="k3E-tO-rNL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
