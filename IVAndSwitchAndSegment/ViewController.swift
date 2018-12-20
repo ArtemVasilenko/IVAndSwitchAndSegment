@@ -18,9 +18,26 @@ class ViewController: UIViewController {
     
     
     @IBAction func segment(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            imageTwo.backgroundColor = .white
+        case 1:
+            imageTwo.backgroundColor = .black
+        case 2:
+            imageTwo.backgroundColor = .green
+        case 3:
+            imageTwo.backgroundColor = .red
+        case 4:
+            imageTwo.backgroundColor = .blue
+        default:
+            ()
+        }
+        
     }
     
     @IBAction func mySwitch(_ sender: UISwitch) {
+        label.text = sender.isOn ? "True": "False"
+        imageOne.contentMode = sender.isOn ? .scaleAspectFit: .scaleToFill
     }
     
     override func viewDidLoad() {
